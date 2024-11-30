@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小鹿记账 - 支持网站</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto; /* 允许滚动 */
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.3s; }
+        .card:nth-child(2) { animation-delay: 0.5s; }
+        .card:nth-child(3) { animation-delay: 0.7s; }
+        
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 美化 ul 和 li */
+        .custom-list {
+            list-style: none; /* 去除默认项目符号 */
+            margin-left: 20px; /* 左侧缩进 */
+            padding: 0;
+        }
+
+        .custom-list li {
+            margin: 8px 0; /* 每个列表项之间的间距 */
+            padding-left: 30px; /* 增加内边距 */
+            text-indent: -25px; /* 突出符号部分 */
+            position: relative; /* 相对定位以便添加自定义符号 */
+        }
+
+        /* 自定义符号 */
+        .custom-list li:before {
+            content: "•"; /* 项目符号 */
+            color: #ff6f61; /* 符号颜色 */
+            font-size: 1.2rem; /* 符号大小 */
+            padding-left: 10px;
+            position: absolute; /* 绝对定位 */
+            left: 0; /* 符号左对齐 */
+            top: 0;
+}
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">欢迎访问小鹿记账支持网站</h1>
+
+        <div class="card">
+            <h2>关于小鹿记账</h2>
+            <p>小鹿记账是一款专注于个人和多人共享记账应用。简单高效，助您轻松掌控财务状况。</p>
+            <a href="https://apps.apple.com" target="_blank" class="button">前往 App Store</a>
+        </div>
+
+        <div class="card">
+            <h2>联系我们</h2>
+            <p>如果您在使用中遇到问题或者有建议，请随时通过以下邮箱联系我们：</p>
+            <p><strong>Email:</strong> <a href="mailto:kinqingsupport@sina.com" style="color: #ff6f61;">kinqingsupport@sina.com</a></p>
+        </div>
+
+        <div class="card">
+            <h2>常见问题</h2>
+            <p>1. 我的数据在多个设备之间是可以同步的吗？<br>是的，我们提供了多设备同步功能。</p>
+            <p>2. 订阅功能包括什么？
+                <br>现阶段 (1.0.0) 主要提供了如下差异化功能：<br>
+                <ul class="custom-list">
+                    <li>支持邀请他人加入您的记账本，共同记账。</li>
+                    <li>支持创建省钱计划，日周月年限额定制及查看。</li>
+                    <li>支持查看以记账本为单位的日周月年流水报告。</li>
+                    <li>去除所有广告。</li>
+                    <li>...</li>
+                </ul>
+            </p>
+            <p>3. 订阅过期后我创建的省钱计划是否还存在？<br>我们将会保留您的省钱计划，但是在订阅恢复之前它将是不可见的。</p>
+            <p>4. 订阅是否可退款？<br>所有订阅均遵守 App Store 的退款政策。</p>
+        </div>
+
+        <div class="card">
+            <h2>未来的功能性更新展望</h2>
+            <p>1. 支持识别各种类型的购物小票直接生成对应流水</p>
+            <p>2. 支持识别支付宝，微信等账单直接生成对应流水</p>
+            <p>3. 共享资产</p>
+            <p>...</p>
+        </div>
+
+        <div class="card">
+            <h2>隐私政策</h2>
+            <p>我们重视您的隐私保护。详细信息请查看我们的隐私政策。</p>
+            <a href="/privacy-policy.html" class="button">查看隐私政策</a>
+        </div>
+    </div>
+</body>
+</html>
