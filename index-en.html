@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu Accounting - Support Website</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto; /* 允许滚动 */
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.3s; }
+        .card:nth-child(2) { animation-delay: 0.5s; }
+        .card:nth-child(3) { animation-delay: 0.7s; }
+        
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 美化 ul 和 li */
+        .custom-list {
+            list-style: none; /* 去除默认项目符号 */
+            margin-left: 20px; /* 左侧缩进 */
+            padding: 0;
+        }
+
+        .custom-list li {
+            margin: 8px 0; /* 每个列表项之间的间距 */
+            padding-left: 30px; /* 增加内边距 */
+            text-indent: -25px; /* 突出符号部分 */
+            position: relative; /* 相对定位以便添加自定义符号 */
+        }
+
+        /* 自定义符号 */
+        .custom-list li:before {
+            content: "•"; /* 项目符号 */
+            color: #ff6f61; /* 符号颜色 */
+            font-size: 1.2rem; /* 符号大小 */
+            padding-left: 10px;
+            position: absolute; /* 绝对定位 */
+            left: 0; /* 符号左对齐 */
+            top: 0;
+}
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Welcome to the Lulu Accounting Support Website</h1>
+
+        <div class="card">
+            <h2>About Lulu Accounting</h2>
+            <p>Lulu Accounting is an app focused on personal and shared accounting. Simple and efficient, it helps you easily manage your finances.</p>
+            <a href="https://apps.apple.com" target="_blank" class="button">Go to App Store</a>
+        </div>
+
+        <div class="card">
+            <h2>Contact Us</h2>
+            <p>If you encounter any issues or have suggestions, feel free to contact us via the following email:</p>
+            <p><strong>Email:</strong> <a href="mailto:kinqingsupport@sina.com" style="color: #ff6f61;">kinqingsupport@sina.com</a></p>
+        </div>
+
+        <div class="card">
+            <h2>Frequently Asked Questions</h2>
+            <p>1. Can my data be synced across multiple devices?<br>Yes, we provide multi-device synchronization.</p>
+            <p>2. What does the subscription include?
+                <br>As of version (1.0.0), the subscription offers the following features:<br>
+                <ul class="custom-list">
+                    <li>Invite others to join your account book for shared accounting.</li>
+                    <li>Create saving plans with customizable daily, weekly, monthly, and yearly limits.</li>
+                    <li>View daily, weekly, monthly, and yearly reports based on your account book.</li>
+                    <li>Remove all ads.</li>
+                    <li>...</li>
+                </ul>
+            </p>
+            <p>3. Will my saving plans still exist if my subscription expires?<br>We will retain your saving plans, but they will be invisible until the subscription is renewed.</p>
+            <p>4. Are subscriptions refundable?<br>All subscriptions adhere to the App Store's refund policy.</p>
+        </div>
+
+        <div class="card">
+            <h2>Future Feature Updates</h2>
+            <p>1. Support for scanning various shopping receipts to generate transactions directly.</p>
+            <p>2. Support for generating transactions directly from Alipay and WeChat bills.</p>
+            <p>3. Shared assets.</p>
+            <p>...</p>
+        </div>
+
+        <div class="card">
+            <h2>Privacy Policy</h2>
+            <p>We value your privacy. For more details, please review our privacy policy.</p>
+            <a href="https://kingeigun.github.io/kinqingsupport/privacy-policy-en.html" class="button">View Privacy Policy</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu Accounting - Sitio de soporte</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto; /* 允许滚动 */
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s ease-in-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.3s; }
+        .card:nth-child(2) { animation-delay: 0.5s; }
+        .card:nth-child(3) { animation-delay: 0.7s; }
+        
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ff6f61;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: white;
+            text-decoration: none;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 美化 ul 和 li */
+        .custom-list {
+            list-style: none; /* 去除默认项目符号 */
+            margin-left: 20px; /* 左侧缩进 */
+            padding: 0;
+        }
+
+        .custom-list li {
+            margin: 8px 0; /* 每个列表项之间的间距 */
+            padding-left: 30px; /* 增加内边距 */
+            text-indent: -25px; /* 突出符号部分 */
+            position: relative; /* 相对定位以便添加自定义符号 */
+        }
+
+        /* 自定义符号 */
+        .custom-list li:before {
+            content: "•"; /* 项目符号 */
+            color: #ff6f61; /* 符号颜色 */
+            font-size: 1.2rem; /* 符号大小 */
+            padding-left: 10px;
+            position: absolute; /* 绝对定位 */
+            left: 0; /* 符号左对齐 */
+            top: 0;
+}
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Bienvenido al sitio de soporte de Lulu Accounting</h1>
+
+        <div class="card">
+            <h2>Sobre Lulu Accounting</h2>
+            <p>Lulu Accounting es una aplicación centrada en la gestión de finanzas personales y compartidas. Es simple y eficiente, ayudándote a gestionar tus finanzas de manera sencilla.</p>
+            <a href="https://apps.apple.com" target="_blank" class="button">Ir a App Store</a>
+        </div>
+
+        <div class="card">
+            <h2>Contacto</h2>
+            <p>Si encuentras problemas durante el uso o tienes sugerencias, no dudes en contactarnos a través del siguiente correo electrónico:</p>
+            <p><strong>Email:</strong> <a href="mailto:kinqingsupport@sina.com" style="color: #ff6f61;">kinqingsupport@sina.com</a></p>
+        </div>
+
+        <div class="card">
+            <h2>Preguntas frecuentes</h2>
+            <p>1. ¿Puedo sincronizar mis datos entre múltiples dispositivos?<br>Sí, ofrecemos funcionalidad de sincronización en múltiples dispositivos.</p>
+            <p>2. ¿Qué incluye la suscripción?
+                <br>En la versión (1.0.0), ofrecemos las siguientes funciones diferenciadas:<br>
+                <ul class="custom-list">
+                    <li>Invita a otros a unirse a tu libro de cuentas y gestiona juntos.</li>
+                    <li>Crea planes de ahorro con límites diarios, semanales, mensuales y anuales.</li>
+                    <li>Consulta informes financieros diarios, semanales, mensuales y anuales por libro de cuentas.</li>
+                    <li>Elimina todos los anuncios.</li>
+                    <li>...</li>
+                </ul>
+            </p>
+            <p>3. ¿Qué sucede con los planes de ahorro si mi suscripción expira?<br>Conservaremos tus planes de ahorro, pero no serán visibles hasta que renueves tu suscripción.</p>
+            <p>4. ¿Es posible obtener un reembolso por la suscripción?<br>Todas las suscripciones están sujetas a la política de reembolsos de App Store.</p>
+        </div>
+
+        <div class="card">
+            <h2>Actualizaciones de funcionalidades futuras</h2>
+            <p>1. Compatibilidad para escanear varios tipos de recibos y generar transacciones automáticamente.</p>
+            <p>2. Compatibilidad para escanear facturas de Alipay y WeChat para generar transacciones automáticamente.</p>
+            <p>3. Gestión de activos compartidos.</p>
+            <p>...</p>
+        </div>
+
+        <div class="card">
+            <h2>Política de privacidad</h2>
+            <p>Valoramos mucho la protección de tu privacidad. Consulta nuestra política de privacidad para más detalles.</p>
+            <a href="https://kingeigun.github.io/kinqingsupport/privacy-policy-es.html" class="button">Ver política de privacidad</a>
+        </div>
+    </div>
+</body>
+</html>
